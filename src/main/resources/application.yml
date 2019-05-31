@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/,http://localhost:9001/eureka/,http://localhost:9002/eureka/
+  instance:
+    hostname: localhost
+#    \u670D\u52A1\u8FC7\u671F\u65F6\u95F4
+    lease-expiration-duration-in-seconds: 4
+#    \u670D\u52A1\u5FC3\u8DF3\u95F4\u9694\u65F6\u95F4
+    lease-renewal-interval-in-seconds: 2
+spring:
+  application:
+    name: eureka-provider
+
+
+---
+
+spring:
+     profiles: dev8050
+server:
+  port: 8050
+
+
+---
+
+spring:
+  profiles: dev8051
+server:
+  port: 8051
